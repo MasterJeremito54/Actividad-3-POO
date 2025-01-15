@@ -2,8 +2,6 @@ import tkinter as tk
 from tkinter import messagebox
 
 
-
-
 class Empleado:
     def __init__(self, codigo, nombre, horas_trabajadas_mes, valor_hora, retencion_fuente):
         self.codigo = codigo
@@ -18,8 +16,6 @@ class Empleado:
         salario_bruto = self.horas_trabajadas_mes * self.valor_hora
         salario_neto = salario_bruto * (1 - retencion_fuente)
         return salario_bruto, salario_neto
-
-
 
 
 def calcular_salario():
@@ -41,8 +37,6 @@ def calcular_salario():
                                           f"Salario Neto: {salario_neto:.2f}")
     except ValueError:
         messagebox.showerror("Error", "ingresa valores válidos en todos los campos.")
-
-
 
 
 ventana = tk.Tk()
